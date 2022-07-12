@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 131723188}
   - component: {fileID: 131723187}
   - component: {fileID: 131723186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,8 +806,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  _jumpPower: 12
+  _jumpPower: 5
   _checkGroundDistance: 0.1
+  _maxJumpCount: 2
+  _jumpButtonName: Jump
+  _horizontalName: Horizontal
+  _verticalName: Vertical
+  _curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isGrounded: 0
+  _maxJumpTime: 1
+  groundCheckRadius: 0.4
+  groundCheckOffsetY: 0.45
+  groundCheckDistance: 0.2
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  JumpButtonName: Jump
 --- !u!54 &1037337224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -822,7 +841,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1043669806
 GameObject:
